@@ -1,46 +1,48 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React, { Component, Fragment } from 'react';
+import ReactDOM  from 'react-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+
+import { Provider as AlertProvider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
+
+// import Header from './layout/Header';
+// import Dashboard from './cuadernos/Dashboard';
+import Alert from './layout/Alerts';
+import Login from './accounts/Login';
+import Register from './accounts/Register';
+// import PrivateRoute from './common/PrivateRoute';
+
+import { Provider } from 'react-redux';
+import store from '../store';
+import { loadUser } from '../actions/auth'
+
+const alertOptions = {
+  timeout: 3000,
+  position: 'top right'
+}
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   data: [],
-    //   loaded: false,
-    //   placeholder: "Loading"
-    // };
+  componentDidMount(){
+    store.dispatch(loadUser());
   }
 
-  // componentDidMount() {
-  //   fetch("api/lead")
-  //     .then(response => {
-  //       if (response.status > 400) {
-  //         return this.setState(() => {
-  //           return { placeholder: "Something went wrong!" };
-  //         });
-  //       }
-  //       return response.json();
-  //     })
-  //     .then(data => {
-  //       this.setState(() => {
-  //         return {
-  //           data,
-  //           loaded: true
-  //         };
-  //       });
-  //     });
-  // }
-
-  render() {
+  render(){
     return (
-      <p>
-        First commit with Django, React, Docker and docker compose
-      </p>
-    );
+      <Provider store={store}>
+        <AlertProvider template={AlertTemplate} {...alertOptions}>
+          <Router>
+            <Alert />
+            <div className="container">
+              <Switch>
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/login" component={Login} />
+              </Switch> 
+            </div>
+          </Router>
+        </AlertProvider> 
+      </Provider>
+      )
   }
 }
 
-export default App;
-
-const container = document.getElementById("app");
-render(<App />, container);
+ReactDOM.render(<App />, document.getElementById('app'));
