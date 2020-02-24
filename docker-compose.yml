@@ -1,0 +1,10 @@
+version: '3'
+services:
+  django:
+    build: .
+    image: dockerdjango 
+    ports:
+      - "8030:8030"
+    command: python ./docker_django/manage.py runserver 0.0.0.0:8030
+    volumes: 
+      - .:/app
