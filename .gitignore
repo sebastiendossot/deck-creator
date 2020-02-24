@@ -1,0 +1,126 @@
+# Created by https://www.gitignore.io
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+.env
+db.sqlite3
+
+# for React 
+
+docker_django/frontend/.DS_STORE
+docker_django/frontend/node_modules
+docker_django/frontend/scripts/flow/*/.flowconfig
+docker_django/frontend/*~
+docker_django/frontend/*.pyc
+docker_django/frontend/.grunt
+docker_django/frontend/_SpecRunner.html
+docker_django/frontend/__benchmarks__
+docker_django/frontend/build/
+docker_django/frontend/remote-repo/
+docker_django/frontend/coverage/
+docker_django/frontend/.module-cache
+docker_django/frontend/fixtures/dom/public/react-dom.js
+docker_django/frontend/fixtures/dom/public/react.js
+docker_django/frontend/test/the-files-to-test.generated.js
+docker_django/frontend/*.log*
+docker_django/frontend/chrome-user-data
+docker_django/frontend/*.sublime-project
+docker_django/frontend/*.sublime-workspace
+docker_django/frontend/.idea
+docker_django/frontend/*.iml
+docker_django/frontend/*.swp
+docker_django/frontend/*.swo
+
+docker_django/frontend/packages/react-devtools-core/dist
+docker_django/frontend/packages/react-devtools-extensions/chrome/build
+docker_django/frontend/packages/react-devtools-extensions/chrome/*.crx
+docker_django/frontend/packages/react-devtools-extensions/chrome/*.pem
+docker_django/frontend/packages/react-devtools-extensions/firefox/build
+docker_django/frontend/packages/react-devtools-extensions/firefox/*.xpi
+docker_django/frontend/packages/react-devtools-extensions/firefox/*.pem
+docker_django/frontend/packages/react-devtools-extensions/shared/build
+docker_django/frontend/packages/react-devtools-inline/dist
+docker_django/frontend/packages/react-devtools-shell/dist
