@@ -18,6 +18,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . /app/
 
-RUN cd ./docker_django/frontend/ && npm install && npm run dev
+RUN cd ./docker_django/frontend/ && npm install && npm run build
 
 EXPOSE 8030
