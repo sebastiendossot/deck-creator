@@ -1,6 +1,9 @@
-export const GET_CUADERNOS = "GET_CUADERNOS";
-export const DELETE_CUADERNO = "DELETE_CUADERNO";
-export const ADD_CUADERNO = "ADD_CUADERNO"; 
+export const GET_DECKS = "GET_DECKS";
+export const DELETE_DECK = "DELETE_DECK";
+export const ADD_DECK = "ADD_DECK"; 
+export const GET_CARDS = "GET_CARDS";
+export const DELETE_CARD = "DELETE_CARD";
+export const ADD_CARD = "ADD_CARD"; 
 export const GET_ERRORS = "GET_ERRORS"; 
 export const CREATE_MESSAGE  = "CREATE_MESSAGE"; 
 export const USER_LOADING  = "USER_LOADING"; 

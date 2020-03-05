@@ -1,8 +1,14 @@
 from rest_framework import serializers
-from cuadernos.models import Cuaderno
+from dashboard.models import Deck, Card
 
-# Cuaderno Serializer
-class CuadernoSerializer(serializers.ModelSerializer):
+# Deck Serializer
+class DeckSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Cuaderno
+    model = Deck
     fields = '__all__'
+
+class CardSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Card
+    fields = ('question', 'answer', 'deck')
+    #fields = '__all__'

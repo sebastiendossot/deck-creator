@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
 
+import Form from './Form';
+import Decks from './Decks';
+
 export default function Dashboard() {
   return (
     <Fragment>
-      <p>Here will go the logic</p>
+      <Form />
+      <Decks />
     </Fragment>
   )
 }
