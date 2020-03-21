@@ -1,0 +1,7 @@
+body{
+  background-color: aqua !important;
+
+}
+.card-deck-style .card{
+  min-width: 10rem !important;
+}

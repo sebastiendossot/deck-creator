@@ -7,7 +7,8 @@ import { Redirect } from 'react-router-dom';
 export class Decks extends Component {  
   
   state = {
-    navigateToDeck: false
+    navigateToDeck: false, 
+    deckId: 0
   }
 
   static propTypes = {
@@ -22,10 +23,13 @@ export class Decks extends Component {
   }
 
   render() {
-    const { navigateToDeck } = this.state;
+    const { navigateToDeck, deckId } = this.state;
 
     if (navigateToDeck) {
-      return <Redirect to="/deck" push={true} />
+      return <Redirect to={{
+            pathname: '/deck',
+            state: { id: deckId }
+        }} push={true} />
     }
 
     return (
@@ -43,7 +47,7 @@ export class Decks extends Component {
           </thead>
           <tbody>
             {this.props.decks.map(deck => (
-              <tr key={deck.id} onClick={() => this.setState({ navigateToDeck: true })}>   
+              <tr key={deck.id} onClick={() => this.setState({ navigateToDeck: true, deckId: deck.id })}>   
                   <td>{deck.id}</td>
                   <td>{deck.title}</td>
                   <td><button onClick={this.props.deleteDeck.bind(this, deck.id)} className="btn btn-danger btn-sm">Delete</button></td>

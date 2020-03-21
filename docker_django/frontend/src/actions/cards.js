@@ -5,10 +5,13 @@ import { tokenConfig } from './auth';
 import { GET_CARDS, DELETE_CARD, ADD_CARD, GET_ERRORS } from './types';
 
 //GET CARDS
- 
-export const getCards = () => (dispatch, getState) => {
-  axios.get('/api/cards/', tokenConfig(getState))
+
+//Id du deck
+
+export const getCards = id => (dispatch, getState) => {
+  axios.get(`/api/cards/${id}/`, tokenConfig(getState))
     .then(res => {
+      console.log("data is here", res.data)
       dispatch({
         type: GET_CARDS,
         payload: res.data
