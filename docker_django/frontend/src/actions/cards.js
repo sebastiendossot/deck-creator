@@ -9,12 +9,13 @@ import { GET_CARDS, DELETE_CARD, ADD_CARD, GET_ERRORS } from './types';
 //Id du deck
 
 export const getCards = id => (dispatch, getState) => {
+  const deckId = id;
   axios.get(`/api/cards/${id}/`, tokenConfig(getState))
     .then(res => {
-      console.log("data is here", res.data)
       dispatch({
         type: GET_CARDS,
-        payload: res.data
+        payload: res.data,
+        deck: deckId
       });
     }).catch(err => dispatch(returnErrors(err.response.data,err.response.status)))
 }
@@ -35,6 +36,7 @@ export const deleteCard = id => (dispatch, getState) => {
 //ADD CARD
 
 export const addCard = card => (dispatch, getState) => {
+  console.log("crotte de bique", card)
   axios.post('/api/cards/', card, tokenConfig(getState))
     .then(res => {
       dispatch(createMessage({addCard: 'Card added'}));

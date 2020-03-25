@@ -27,10 +27,11 @@ export class Decks extends Component {
 
     if (navigateToDeck) {
       return <Redirect to={{
-            pathname: '/deck',
-            state: { id: deckId }
+            pathname: `/deck/${deckId}`
         }} push={true} />
     }
+    //,
+    // state: { id: deckId }
 
     return (
       <Fragment>

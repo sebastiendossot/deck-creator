@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { addCard  } from '../../actions/cards';
+import { addCard, deck  } from '../../actions/cards';
 
 
 export class Form extends Component {
+  static propTypes = { 
+    deck: PropTypes.number,
+    addCard: PropTypes.func.isRequired
+  }
+
   state = {
     question: '', 
     answer: '',
-    deck: 1
+    deck: 0
   }
 
-  static propTypes = { 
-    addCard: PropTypes.func.isRequired 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.deck != this.state.deck){
+      this.setState({deck: nextProps.deck})
+    }
   }
 
   onChange = e => this.setState({[e.target.name]: e.target.value})
@@ -25,15 +32,14 @@ export class Form extends Component {
     this.props.addCard(card); 
     this.setState({
       question: '', 
-      answer: '',
-      deck: 1
+      answer: ''
     })
   }
 
   render() {
     const {question, answer, deck} = this.state;
     return (
-      <div className="card">
+      <div className="card" key={0}>
         <div className="card-header">
           Add New Card
         </div>
@@ -56,12 +62,6 @@ export class Form extends Component {
                   onChange={this.onChange}
                   value={answer}
                   />
-                <input 
-                  type="hidden" 
-                  className="form-control" 
-                  name="form"
-                  value={deck}
-                  />
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
@@ -72,4 +72,8 @@ export class Form extends Component {
   }
 }
 
-export default connect(null, { addCard  })(Form);
+const mapStateToProps = state => ({
+  deck: state.cards.deck
+});
+
+export default connect(mapStateToProps, { addCard })(Form);

@@ -2,20 +2,29 @@ import React, { Component, Fragment, Link } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getCards, deleteCard }  from '../../actions/cards';
+import { withRouter } from "react-router";
 
 import Form from './Form';
 
 export class Cards extends Component {
   static propTypes = {
+    deck: PropTypes.number,
     cards: PropTypes.array.isRequired,
     getCards: PropTypes.func.isRequired,
     deleteCard: PropTypes.func.isRequired,
   }
 
   componentDidMount(){
-    console.log("I am the state id", this.props.location.state.id);
-    this.props.getCards(this.props.location.state.id);
+    //   const deckId = this.props.match.params.id;
+    // //console.log("I am the state id", this.props.location.state.id);
+    
+    // console.log("I am the state id", deckId);
+    
+    //this.props.getCards(this.props.deck);
+
+    this.props.getCards(this.props.match.params.id);
   }
+
 
   render() {
     return (
@@ -23,22 +32,15 @@ export class Cards extends Component {
         <h2>
           Deck's List of Cards
         </h2>
-        <div className="card-deck card-deck-style">
-          <div className="card" key={0}>
-            <div className="card-body">
-              <h5 className="card-title">card</h5>
-            </div>
-          </div>
-           {this.props.cards.map(card => (
-            <div className="card" key={card.id}>
-              <div className="card-body">
-                <h5 className="card-title">{card.question}</h5>
+        <div className="card-deck card-deck-style" key="List">
+           {this.props.cards.map((card, index) => (
+              <div className="card" key={index}>
+                <div className="card-body">
+                  <h5 className="card-title">{card.question}</h5>
+                </div>
               </div>
-            </div>
-          )
-        )}
-
-        <Form />
+            ))}
+          <Form />
         </div>
       </Fragment>
     )
@@ -46,7 +48,8 @@ export class Cards extends Component {
 }
 
 const mapStateToProps = state => ({
-  cards: state.cards.cards
+  cards: state.cards.cards,
+  deck: state.cards.deck
 });
 
-export default connect(mapStateToProps, {getCards, deleteCard})(Cards);
+export default withRouter(connect(mapStateToProps, {getCards, deleteCard})(Cards));

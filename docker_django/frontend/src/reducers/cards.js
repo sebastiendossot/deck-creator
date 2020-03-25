@@ -2,7 +2,8 @@ import { GET_CARDS, DELETE_CARD, ADD_CARD, LOGOUT_SUCCESS } from '../actions/typ
 
 
 const initialState = {
-  cards: []
+  cards: [],
+  deck: 0
 }
 
 export default function(state = initialState, action){
@@ -10,7 +11,8 @@ export default function(state = initialState, action){
     case GET_CARDS: 
       return {
         ...state,
-        cards: action.payload
+        cards: action.payload,
+        deck: parseInt(action.deck)
       };
     case DELETE_CARD: 
       return {
@@ -25,7 +27,8 @@ export default function(state = initialState, action){
     case LOGOUT_SUCCESS:
       return {
         ...state,
-        cards: []
+        cards: [],
+        deck: null
       }
     default:
       return state;
