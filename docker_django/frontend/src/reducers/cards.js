@@ -28,7 +28,7 @@ export default function(state = initialState, action){
       return {
         ...state,
         cards: [],
-        deck: null
+        deck: 0
       }
     default:
       return state;

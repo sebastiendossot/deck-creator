@@ -36,7 +36,6 @@ export const deleteCard = id => (dispatch, getState) => {
 //ADD CARD
 
 export const addCard = card => (dispatch, getState) => {
-  console.log("crotte de bique", card)
   axios.post('/api/cards/', card, tokenConfig(getState))
     .then(res => {
       dispatch(createMessage({addCard: 'Card added'}));

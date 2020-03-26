@@ -8,6 +8,7 @@ import AlertTemplate from 'react-alert-template-basic';
 import Header from './layout/Header';
 import Dashboard from './dashboard/Dashboard';
 import Cards from './deck/Cards';
+import Player from './player/Player';
 import Alert from './layout/Alerts';
 import Login from './accounts/Login';
 import Register from './accounts/Register';
@@ -44,6 +45,7 @@ class App extends Component {
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/deck/:id" component={Cards} />
+                <Route exact path="/player/:id" component={Player} />
               </Switch> 
             </div>
           </Router>

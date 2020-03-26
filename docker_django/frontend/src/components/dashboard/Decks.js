@@ -8,6 +8,7 @@ export class Decks extends Component {
   
   state = {
     navigateToDeck: false, 
+    playDeck: false,
     deckId: 0
   }
 
@@ -22,16 +23,25 @@ export class Decks extends Component {
     this.props.getDecks();
   }
 
+  playDeckRedirect = (event, deckId) => {
+    console.log("ici", event)
+    event.stopPropagation();
+    this.setState({ playDeck: true, navigateToDeck: false, deckId: deckId })
+  }
+
   render() {
-    const { navigateToDeck, deckId } = this.state;
+    const { navigateToDeck, playDeck, deckId } = this.state;
+    const playDeckRedirect = this.playDeckRedirect;
 
     if (navigateToDeck) {
       return <Redirect to={{
             pathname: `/deck/${deckId}`
         }} push={true} />
+    }else if(playDeck){
+      return <Redirect to={{
+        pathname: `/player/${deckId}`
+      }} push={true} />
     }
-    //,
-    // state: { id: deckId }
 
     return (
       <Fragment>
@@ -41,16 +51,16 @@ export class Decks extends Component {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Title</th>
+              <th/>
               <th/>
             </tr>
           </thead>
           <tbody>
             {this.props.decks.map(deck => (
               <tr key={deck.id} onClick={() => this.setState({ navigateToDeck: true, deckId: deck.id })}>   
-                  <td>{deck.id}</td>
                   <td>{deck.title}</td>
+                  <td><button onClick={(event) => playDeckRedirect(event, deck.id)} className="btn btn-success btn-sm">Play</button></td>
                   <td><button onClick={this.props.deleteDeck.bind(this, deck.id)} className="btn btn-danger btn-sm">Delete</button></td>
               </tr>
               )

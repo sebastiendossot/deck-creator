@@ -15,13 +15,6 @@ export class Cards extends Component {
   }
 
   componentDidMount(){
-    //   const deckId = this.props.match.params.id;
-    // //console.log("I am the state id", this.props.location.state.id);
-    
-    // console.log("I am the state id", deckId);
-    
-    //this.props.getCards(this.props.deck);
-
     this.props.getCards(this.props.match.params.id);
   }
 
