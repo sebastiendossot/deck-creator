@@ -1,3 +1,7 @@
 .card-deck-style .card{
   min-width: 10rem !important;
 }
+
+.hidden{
+  display: none;
+}
