@@ -5,6 +5,8 @@ import { getCards, deleteCard }  from '../../actions/cards';
 import { withRouter } from "react-router";
 import { Redirect } from 'react-router-dom';
 
+import Timer from './Timer';
+
 
 export class Player extends Component {
   static propTypes = {
@@ -18,7 +20,8 @@ export class Player extends Component {
     questionShown: true,
     currentCard: null,
     indexCurrentCard: 0, 
-    endDeck: false
+    endDeck: false,
+    score: 0
   }
 
   componentDidMount(){
@@ -31,29 +34,38 @@ export class Player extends Component {
 
   cardRemembered(){
     //things if card remembered
-    this.nextCard();
+    this.nextCard(true);
   }
 
   cardForgotten(){
     // things if card forgotten
-    this.nextCard();
+    this.nextCard(false);
   }
 
-  nextCard(){
+  nextCard(cardRemembered){
     const nextIndex = this.state.indexCurrentCard + 1;
     const cards = this.props.cards;
+    let score = cardRemembered ? this.state.score + 1 : this.state.score;
     if(nextIndex<cards.length){
-      this.setState({currentCard: cards[nextIndex], indexCurrentCard: nextIndex})
+      this.setState({currentCard: cards[nextIndex], indexCurrentCard: nextIndex , score: score})
     }else{
       this.setState({endDeck: true})
-      // come back if end of deck.
     }
   }
 
+  returnRightEye(){
+    console.log(typeof this.state.questionShown)
+    if (this.state.questionShown){
+      return <i className="fa fa-eye"/>
+    } else {
+      return <i className="fa fa-eye-slash"/>
+    }
+
+    
+  }
+
   render() {
-    const {questionShown, currentCard, endDeck} = this.state;
-    // const cardRemembered = this.props.cardRemembered;
-    // const cardForgotten= this.props.cardForgotten;
+    const {questionShown, currentCard, endDeck, score} = this.state;
 
     if (endDeck) {
       return <Redirect to={{
@@ -63,18 +75,28 @@ export class Player extends Component {
 
     return (
       <Fragment>
-        <h2>
-          Player
-        </h2>
-        <div className="card-deck card-deck-style">
+        <div className="d-flex justify-content-center board">
+        <Timer />
+        <div className="player-counter">
+          Score: {`${score}`}
+        </div>
         {currentCard ? 
-          <div className="card">
-              <div className="card-body">
-                <h5 className={`card-title ${questionShown ? '' : 'hidden'}`}>{currentCard.question}</h5>
-                <h5 className={`card-title ${questionShown ? 'hidden' : ''}`}>{currentCard.answer}</h5>
-                <button className="btn btn-primary"  onClick={() => this.cardRemembered()} >I got it</button>
-                <button className="btn btn-warning" onClick={() => this.cardForgotten()}>I can't remember</button>
-                <button className="btn btn-info" onClick={() => this.setState({questionShown: !this.state.questionShown})}>{`Show ${questionShown ? 'answer' : 'question'}`}</button>
+          <div className="card align-self-center">
+              <div className="card-body d-flex justify-content-center">
+                <h5 className={`card-title align-self-center ${questionShown ? '' : 'hidden'}`}>{currentCard.question}</h5>
+                <h5 className={`card-title align-self-center ${questionShown ? 'hidden' : ''}`}>{currentCard.answer}</h5>
+              </div>
+              <div className="card-footer d-flex justify-content-center card-footer-player"> 
+                <button className="btn btn-primary"  onClick={() => this.cardRemembered()} >
+                  <i className="fa fa-thumbs-up"></i>
+                </button>
+                <button className="btn btn-warning" onClick={() => this.cardForgotten()}>
+                  <i className="fa fa-thumbs-down"></i>
+                </button>
+                <button className="btn btn-info" onClick={() => this.setState({questionShown: !this.state.questionShown})}>
+                  <div className={`${questionShown ? '' : 'hidden'}`}><i className="fa fa-eye"></i></div>
+                  <div className={`${questionShown ? 'hidden' : ''}`}><i className="fa fa-eye-slash"></i></div>
+                </button>
               </div>
             </div>
             :

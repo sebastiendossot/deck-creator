@@ -1,0 +1,70 @@
+// TODO make other files for css
+
+// mixins
+
+@mixin card-shadow {
+  -webkit-box-shadow: inset 0px 0px 63px -28px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 63px -28px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 63px -28px rgba(0,0,0,0.75);
+}
+
+// variables
+$width-big-card: 275px;
+$height-big-card: 390px;
+
+$color-board: beige;
+$color-pale: whitesmoke;
+$color-dark: rgb(9, 32, 0);
+
+// general
+.hidden{
+  display: none !important;
+}
+
+//deck
+.card-deck-style .card{
+  min-width: 10rem !important;
+}
+
+
+
+
+// player  
+.board {
+  // background-color: $color-board;
+  height: 100%;
+  .card {
+    @include card-shadow;
+
+    width: $width-big-card;
+    height: $height-big-card;
+    border-radius: 0.5rem;
+    background-color: $color-pale;
+    .card-title{
+      color: $color-dark;
+    }
+    .card-footer-player{
+      @include card-shadow;
+      background-color: $color-pale;
+      .btn{
+        margin: 0 10px;
+      }
+    }
+
+  } 
+
+}
+
+//Timer
+
+.player-timer{
+  color: $color-pale;
+  position: absolute;
+  left:25%;
+}
+
+.player-counter{
+  color: $color-pale;
+  position: absolute;
+  right:25%;
+}

@@ -12,6 +12,8 @@ class DashboardViewSet(viewsets.ModelViewSet):
   serializer_class = DeckSerializer 
 
   def get_queryset(self):
+    print("decks")
+    print(self.request.user.decks.all())
     return self.request.user.decks.all()
 
   def perform_create(self, serializer):
@@ -26,16 +28,14 @@ class DeckViewSet(viewsets.ModelViewSet):
   serializer_class = CardSerializer 
   
   def get_queryset(self):
-    print("second")
-    print(self.request.user)    
-    deck = Deck.objects.filter()[:1].get()
-    print("third")
-    print(deck)
-    return self.request.cards.all()
+    deck = self.kwargs['deck']
+    print("deck")
+    print(Card.objects.all().filter(deck=deck))
+    queryset = Card.objects.all().filter(deck=deck)
+    return queryset
 
   def perform_create(self, serializer):
-    deck = Card.objects.all()
-    print("third")
-    print(deck)
+    print("creation")
+    print(self)
     serializer.save()
     

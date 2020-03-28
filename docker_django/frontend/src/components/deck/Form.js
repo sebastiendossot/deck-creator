@@ -18,7 +18,11 @@ export class Form extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log("WHATSRONG",nextProps.deck)
+    console.log("WHATSRONG2", this.state.deck)
     if(nextProps.deck != this.state.deck){
+      console.log("oui")
+      
       this.setState({deck: nextProps.deck})
     }
   }

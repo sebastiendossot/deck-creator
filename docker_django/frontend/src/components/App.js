@@ -20,7 +20,9 @@ import { loadUser } from '../actions/auth'
 
 // import "./styles/main.css";
 
-import '../../styles/main.css';
+ import '../../styles/main.scss';
+// require ('!style-loader!css-loader!postcss-loader!sass-loader!../../styles/main.scss');
+
 
 const alertOptions = {
   timeout: 3000,
@@ -37,17 +39,17 @@ class App extends Component {
       <Provider store={store}>
         <AlertProvider template={AlertTemplate} {...alertOptions}>
           <Router>
-            <Header />
-            <Alert />
-            <div className="container">
-              <Switch>
-                <PrivateRoute exact path="/" component={Dashboard} />
-                <Route exact path="/register" component={Register} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/deck/:id" component={Cards} />
-                <Route exact path="/player/:id" component={Player} />
-              </Switch> 
-            </div>
+              <Header />
+              <Alert />
+              <div className="container vh-100">
+                <Switch>
+                  <PrivateRoute exact path="/" component={Dashboard} />
+                  <Route exact path="/register" component={Register} />
+                  <Route exact path="/login" component={Login} />
+                  <Route exact path="/deck/:id" component={Cards} />
+                  <Route exact path="/player/:id" component={Player} />
+                </Switch> 
+              </div>
           </Router>
         </AlertProvider> 
       </Provider>

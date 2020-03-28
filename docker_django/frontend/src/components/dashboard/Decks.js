@@ -24,7 +24,6 @@ export class Decks extends Component {
   }
 
   playDeckRedirect = (event, deckId) => {
-    console.log("ici", event)
     event.stopPropagation();
     this.setState({ playDeck: true, navigateToDeck: false, deckId: deckId })
   }

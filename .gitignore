@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io
 
+docker_django/frontend/static/frontend/*
+
 ### OSX ###
 .DS_Store
 .AppleDouble
