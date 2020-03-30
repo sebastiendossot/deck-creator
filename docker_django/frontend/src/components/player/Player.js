@@ -53,17 +53,6 @@ export class Player extends Component {
     }
   }
 
-  returnRightEye(){
-    console.log(typeof this.state.questionShown)
-    if (this.state.questionShown){
-      return <i className="fa fa-eye"/>
-    } else {
-      return <i className="fa fa-eye-slash"/>
-    }
-
-    
-  }
-
   render() {
     const {questionShown, currentCard, endDeck, score} = this.state;
 

@@ -1,0 +1,953 @@
+{
+  "Capitals": [
+    {
+      "question": "Afghanistan",
+      "answer": "Kabul"
+  },
+  {
+      "question": "Albania",
+      "answer": "Tirana"
+  },
+  {
+      "question": "Algeria",
+      "answer": "Alger"
+  },
+  {
+      "question": "American Samoa",
+      "answer": "Fagatogo"
+  },
+  {
+      "question": "Andorra",
+      "answer": "Andorra la Vella"
+  },
+  {
+      "question": "Angola",
+      "answer": "Luanda"
+  },
+  {
+      "question": "Anguilla",
+      "answer": "The Valley"
+  },
+  {
+      "question": "Antigua and Barbuda",
+      "answer": "Saint John's"
+  },
+  {
+      "question": "Argentina",
+      "answer": "Buenos Aires"
+  },
+  {
+      "question": "Armenia",
+      "answer": "Yerevan"
+  },
+  {
+      "question": "Aruba",
+      "answer": "Oranjestad"
+  },
+  {
+      "question": "Australia",
+      "answer": "Canberra"
+  },
+  {
+      "question": "Austria",
+      "answer": "Wien"
+  },
+  {
+      "question": "Azerbaijan",
+      "answer": "Baku"
+  },
+  {
+      "question": "Bahamas",
+      "answer": "Nassau"
+  },
+  {
+      "question": "Bahrain",
+      "answer": "al-Manama"
+  },
+  {
+      "question": "Bangladesh",
+      "answer": "Dhaka"
+  },
+  {
+      "question": "Barbados",
+      "answer": "Bridgetown"
+  },
+  {
+      "question": "Belarus",
+      "answer": "Minsk"
+  },
+  {
+      "question": "Belgium",
+      "answer": "Bruxelles [Brussel]"
+  },
+  {
+      "question": "Belize",
+      "answer": "Belmopan"
+  },
+  {
+      "question": "Benin",
+      "answer": "Porto-Novo"
+  },
+  {
+      "question": "Bermuda",
+      "answer": "Hamilton"
+  },
+  {
+      "question": "Bhutan",
+      "answer": "Thimphu"
+  },
+  {
+      "question": "Bolivia",
+      "answer": "La Paz"
+  },
+  {
+      "question": "Bosnia and Herzegovina",
+      "answer": "Sarajevo"
+  },
+  {
+      "question": "Botswana",
+      "answer": "Gaborone"
+  },
+  {
+      "question": "Bouvet Island",
+      "answer": null
+  },
+  {
+      "question": "Brazil",
+      "answer": "Brasília"
+  },
+  {
+      "question": "Brunei",
+      "answer": "Bandar Seri Begawan"
+  },
+  {
+      "question": "Bulgaria",
+      "answer": "Sofia"
+  },
+  {
+      "question": "Burkina Faso",
+      "answer": "Ouagadougou"
+  },
+  {
+      "question": "Burundi",
+      "answer": "Bujumbura"
+  },
+  {
+      "question": "Cambodia",
+      "answer": "Phnom Penh"
+  },
+  {
+      "question": "Cameroon",
+      "answer": "Yaound"
+  },
+  {
+      "question": "Canada",
+      "answer": "Ottawa"
+  },
+  {
+      "question": "Cape Verde",
+      "answer": "Praia"
+  },
+  {
+      "question": "Cayman Islands",
+      "answer": "George Town"
+  },
+  {
+      "question": "Central African Republic",
+      "answer": "Bangui"
+  },
+  {
+      "question": "Chad",
+      "answer": "N'Djam"
+  },
+  {
+      "question": "Chile",
+      "answer": "Santiago de Chile"
+  },
+  {
+      "question": "China",
+      "answer": "Peking"
+  },
+  {
+      "question": "Christmas Island",
+      "answer": "Flying Fish Cove"
+  },
+  {
+      "question": "Cocos (Keeling) Islands",
+      "answer": "West Island"
+  },
+  {
+      "question": "Colombia",
+      "answer": "Santaf"
+  },
+  {
+      "question": "Comoros",
+      "answer": "Moroni"
+  },
+  {
+      "question": "Congo",
+      "answer": "Brazzaville"
+  },
+  {
+      "question": "Cook Islands",
+      "answer": "Avarua"
+  },
+  {
+      "question": "Costa Rica",
+      "answer": "San Jos"
+  },
+  {
+      "question": "Croatia",
+      "answer": "Zagreb"
+  },
+  {
+      "question": "Cuba",
+      "answer": "La Habana"
+  },
+  {
+      "question": "Cyprus",
+      "answer": "Nicosia"
+  },
+  {
+      "question": "Czech Republic",
+      "answer": "Praha"
+  },
+  {
+      "question": "Denmark",
+      "answer": "Copenhagen"
+  },
+  {
+      "question": "Djibouti",
+      "answer": "Djibouti"
+  },
+  {
+      "question": "Dominica",
+      "answer": "Roseau"
+  },
+  {
+      "question": "Dominican Republic",
+      "answer": "Santo Domingo de Guzm"
+  },
+  {
+      "question": "East Timor",
+      "answer": "Dili"
+  },
+  {
+      "question": "Ecuador",
+      "answer": "Quito"
+  },
+  {
+      "question": "Egypt",
+      "answer": "Cairo"
+  },
+  {
+      "question": "El Salvador",
+      "answer": "San Salvador"
+  },
+  {
+      "question": "England",
+      "answer": "London"
+  },
+  {
+      "question": "Equatorial Guinea",
+      "answer": "Malabo"
+  },
+  {
+      "question": "Eritrea",
+      "answer": "Asmara"
+  },
+  {
+      "question": "Estonia",
+      "answer": "Tallinn"
+  },
+  {
+      "question": "Ethiopia",
+      "answer": "Addis Abeba"
+  },
+  {
+      "question": "Falkland Islands",
+      "answer": "Stanley"
+  },
+  {
+      "question": "Faroe Islands",
+      "answer": "Tórshavn"
+  },
+  {
+      "question": "Fiji Islands",
+      "answer": "Suva"
+  },
+  {
+      "question": "Finland",
+      "answer": "Helsinki [Helsingfors]"
+  },
+  {
+      "question": "France",
+      "answer": "Paris"
+  },
+  {
+      "question": "French Guiana",
+      "answer": "Cayenne"
+  },
+  {
+      "question": "French Polynesia",
+      "answer": "Papeete"
+  },
+  {
+      "question": "Gabon",
+      "answer": "Libreville"
+  },
+  {
+      "question": "Gambia",
+      "answer": "Banjul"
+  },
+  {
+      "question": "Georgia",
+      "answer": "Tbilisi"
+  },
+  {
+      "question": "Germany",
+      "answer": "Berlin"
+  },
+  {
+      "question": "Ghana",
+      "answer": "Accra"
+  },
+  {
+      "question": "Gibraltar",
+      "answer": "Gibraltar"
+  },
+  {
+      "question": "Greece",
+      "answer": "Athenai"
+  },
+  {
+      "question": "Greenland",
+      "answer": "Nuuk"
+  },
+  {
+      "question": "Grenada",
+      "answer": "Saint George's"
+  },
+  {
+      "question": "Guadeloupe",
+      "answer": "Basse-Terre"
+  },
+  {
+      "question": "Guam",
+      "answer": "Aga"
+  },
+  {
+      "question": "Guatemala",
+      "answer": "Ciudad de Guatemala"
+  },
+  {
+      "question": "Guinea",
+      "answer": "Conakry"
+  },
+  {
+      "question": "Guinea-Bissau",
+      "answer": "Bissau"
+  },
+  {
+      "question": "Guyana",
+      "answer": "Georgetown"
+  },
+  {
+      "question": "Haiti",
+      "answer": "Port-au-Prince"
+  },
+  {
+      "question": "Holy See (Vatican City State)",
+      "answer": "Citt"
+  },
+  {
+      "question": "Honduras",
+      "answer": "Tegucigalpa"
+  },
+  {
+      "question": "Hong Kong",
+      "answer": "Victoria"
+  },
+  {
+      "question": "Hungary",
+      "answer": "Budapest"
+  },
+  {
+      "question": "Iceland",
+      "answer": "Reykjav"
+  },
+  {
+      "question": "India",
+      "answer": "New Delhi"
+  },
+  {
+      "question": "Indonesia",
+      "answer": "Jakarta"
+  },
+  {
+      "question": "Iran",
+      "answer": "Tehran"
+  },
+  {
+      "question": "Iraq",
+      "answer": "Baghdad"
+  },
+  {
+      "question": "Ireland",
+      "answer": "Dublin"
+  },
+  {
+      "question": "Israel",
+      "answer": "Jerusalem"
+  },
+  {
+      "question": "Italy",
+      "answer": "Roma"
+  },
+  {
+      "question": "Ivory Coast",
+      "answer": "Yamoussoukro"
+  },
+  {
+      "question": "Jamaica",
+      "answer": "Kingston"
+  },
+  {
+      "question": "Japan",
+      "answer": "Tokyo"
+  },
+  {
+      "question": "Jordan",
+      "answer": "Amman"
+  },
+  {
+      "question": "Kazakhstan",
+      "answer": "Astana"
+  },
+  {
+      "question": "Kenya",
+      "answer": "Nairobi"
+  },
+  {
+      "question": "Kiribati",
+      "answer": "Bairiki"
+  },
+  {
+      "question": "Kuwait",
+      "answer": "Kuwait"
+  },
+  {
+      "question": "Kyrgyzstan",
+      "answer": "Bishkek"
+  },
+  {
+      "question": "Laos",
+      "answer": "Vientiane"
+  },
+  {
+      "question": "Latvia",
+      "answer": "Riga"
+  },
+  {
+      "question": "Lebanon",
+      "answer": "Beirut"
+  },
+  {
+      "question": "Lesotho",
+      "answer": "Maseru"
+  },
+  {
+      "question": "Liberia",
+      "answer": "Monrovia"
+  },
+  {
+      "question": "Libyan Arab Jamahiriya",
+      "answer": "Tripoli"
+  },
+  {
+      "question": "Liechtenstein",
+      "answer": "Vaduz"
+  },
+  {
+      "question": "Lithuania",
+      "answer": "Vilnius"
+  },
+  {
+      "question": "Luxembourg",
+      "answer": "Luxembourg [Luxemburg/L"
+  },
+  {
+      "question": "Macao",
+      "answer": "Macao"
+  },
+  {
+      "question": "North Macedonia",
+      "answer": "Skopje"
+  },
+  {
+      "question": "Madagascar",
+      "answer": "Antananarivo"
+  },
+  {
+      "question": "Malawi",
+      "answer": "Lilongwe"
+  },
+  {
+      "question": "Malaysia",
+      "answer": "Kuala Lumpur"
+  },
+  {
+      "question": "Maldives",
+      "answer": "Male"
+  },
+  {
+      "question": "Mali",
+      "answer": "Bamako"
+  },
+  {
+      "question": "Malta",
+      "answer": "Valletta"
+  },
+  {
+      "question": "Marshall Islands",
+      "answer": "Dalap-Uliga-Darrit"
+  },
+  {
+      "question": "Martinique",
+      "answer": "Fort-de-France"
+  },
+  {
+      "question": "Mauritania",
+      "answer": "Nouakchott"
+  },
+  {
+      "question": "Mauritius",
+      "answer": "Port-Louis"
+  },
+  {
+      "question": "Mayotte",
+      "answer": "Mamoutzou"
+  },
+  {
+      "question": "Mexico",
+      "answer": "Ciudad de M"
+  },
+  {
+      "question": "Micronesia, Federated States of",
+      "answer": "Palikir"
+  },
+  {
+      "question": "Moldova",
+      "answer": "Chisinau"
+  },
+  {
+      "question": "Monaco",
+      "answer": "Monaco-Ville"
+  },
+  {
+      "question": "Mongolia",
+      "answer": "Ulan Bator"
+  },
+  {
+      "question": "Montserrat",
+      "answer": "Plymouth"
+  },
+  {
+      "question": "Morocco",
+      "answer": "Rabat"
+  },
+  {
+      "question": "Mozambique",
+      "answer": "Maputo"
+  },
+  {
+      "question": "Myanmar",
+      "answer": "Rangoon (Yangon)"
+  },
+  {
+      "question": "Namibia",
+      "answer": "Windhoek"
+  },
+  {
+      "question": "Nauru",
+      "answer": "Yaren"
+  },
+  {
+      "question": "Nepal",
+      "answer": "Kathmandu"
+  },
+  {
+      "question": "Netherlands",
+      "answer": "Amsterdam"
+  },
+  {
+      "question": "Netherlands Antilles",
+      "answer": "Willemstad"
+  },
+  {
+      "question": "New Caledonia",
+      "answer": "Noum"
+  },
+  {
+      "question": "New Zealand",
+      "answer": "Wellington"
+  },
+  {
+      "question": "Nicaragua",
+      "answer": "Managua"
+  },
+  {
+      "question": "Niger",
+      "answer": "Niamey"
+  },
+  {
+      "question": "Nigeria",
+      "answer": "Abuja"
+  },
+  {
+      "question": "Niue",
+      "answer": "Alofi"
+  },
+  {
+      "question": "Norfolk Island",
+      "answer": "Kingston"
+  },
+  {
+      "question": "North Korea",
+      "answer": "Pyongyang"
+  },
+  {
+      "question": "Northern Ireland",
+      "answer": "Belfast"
+  },
+  {
+      "question": "Northern Mariana Islands",
+      "answer": "Garapan"
+  },
+  {
+      "question": "Norway",
+      "answer": "Oslo"
+  },
+  {
+      "question": "Oman",
+      "answer": "Masqat"
+  },
+  {
+      "question": "Pakistan",
+      "answer": "Islamabad"
+  },
+  {
+      "question": "Palau",
+      "answer": "Koror"
+  },
+  {
+      "question": "Palestine",
+      "answer": "Gaza"
+  },
+  {
+      "question": "Panama",
+      "answer": "Ciudad de Panam"
+  },
+  {
+      "question": "Papua New Guinea",
+      "answer": "Port Moresby"
+  },
+  {
+      "question": "Paraguay",
+      "answer": "Asunci"
+  },
+  {
+      "question": "Peru",
+      "answer": "Lima"
+  },
+  {
+      "question": "Philippines",
+      "answer": "Manila"
+  },
+  {
+      "question": "Pitcairn",
+      "answer": "Adamstown"
+  },
+  {
+      "question": "Poland",
+      "answer": "Warszawa"
+  },
+  {
+      "question": "Portugal",
+      "answer": "Lisboa"
+  },
+  {
+      "question": "Puerto Rico",
+      "answer": "San Juan"
+  },
+  {
+      "question": "Qatar",
+      "answer": "Doha"
+  },
+  {
+      "question": "Reunion",
+      "answer": "Saint-Denis"
+  },
+  {
+      "question": "Romania",
+      "answer": "Bucuresti"
+  },
+  {
+      "question": "Russian Federation",
+      "answer": "Moscow"
+  },
+  {
+      "question": "Rwanda",
+      "answer": "Kigali"
+  },
+  {
+      "question": "Saint Helena",
+      "answer": "Jamestown"
+  },
+  {
+      "question": "Saint Kitts and Nevis",
+      "answer": "Basseterre"
+  },
+  {
+      "question": "Saint Lucia",
+      "answer": "Castries"
+  },
+  {
+      "question": "Saint Pierre and Miquelon",
+      "answer": "Saint-Pierre"
+  },
+  {
+      "question": "Saint Vincent and the Grenadines",
+      "answer": "Kingstown"
+  },
+  {
+      "question": "Samoa",
+      "answer": "Apia"
+  },
+  {
+      "question": "San Marino",
+      "answer": "San Marino"
+  },
+  {
+      "question": "Sao Tome and Principe",
+      "answer": "S"
+  },
+  {
+      "question": "Saudi Arabia",
+      "answer": "Riyadh"
+  },
+  {
+      "question": "Scotland",
+      "answer": "Edinburgh"
+  },
+  {
+      "question": "Senegal",
+      "answer": "Dakar"
+  },
+  {
+      "question": "Seychelles",
+      "answer": "Victoria"
+  },
+  {
+      "question": "Sierra Leone",
+      "answer": "Freetown"
+  },
+  {
+      "question": "Singapore",
+      "answer": "Singapore"
+  },
+  {
+      "question": "Slovakia",
+      "answer": "Bratislava"
+  },
+  {
+      "question": "Slovenia",
+      "answer": "Ljubljana"
+  },
+  {
+      "question": "Solomon Islands",
+      "answer": "Honiara"
+  },
+  {
+      "question": "Somalia",
+      "answer": "Mogadishu"
+  },
+  {
+      "question": "South Africa",
+      "answer": "Pretoria"
+  },
+  {
+      "question": "South Korea",
+      "answer": "Seoul"
+  },
+  {
+      "question": "South Sudan",
+      "answer": "Juba"
+  },
+  {
+      "question": "Spain",
+      "answer": "Madrid"
+  },
+  {
+      "question": "SriLanka",
+      "answer": "Colombo, Sri Jayawardenapura Kotte"
+  },
+  {
+      "question": "Sudan",
+      "answer": "Khartum"
+  },
+  {
+      "question": "Suriname",
+      "answer": "Paramaribo"
+  },
+  {
+      "question": "Svalbard and Jan Mayen",
+      "answer": "Longyearbyen"
+  },
+  {
+      "question": "Swaziland",
+      "answer": "Mbabane"
+  },
+  {
+      "question": "Sweden",
+      "answer": "Stockholm"
+  },
+  {
+      "question": "Switzerland",
+      "answer": "Bern"
+  },
+  {
+      "question": "Syria",
+      "answer": "Damascus"
+  },
+  {
+      "question": "Tajikistan",
+      "answer": "Dushanbe"
+  },
+  {
+      "question": "Tanzania",
+      "answer": "Dodoma"
+  },
+  {
+      "question": "Thailand",
+      "answer": "Bangkok"
+  },
+  {
+      "question": "The Democratic Republic of Congo",
+      "answer": "Kinshasa"
+  },
+  {
+      "question": "Togo",
+      "answer": "Lome"
+  },
+  {
+      "question": "Tokelau",
+      "answer": "Fakaofo"
+  },
+  {
+      "question": "Tonga",
+      "answer": "Nuku'alofa"
+  },
+  {
+      "question": "Trinidad and Tobago",
+      "answer": "Port-of-Spain"
+  },
+  {
+      "question": "Tunisia",
+      "answer": "Tunis"
+  },
+  {
+      "question": "Turkey",
+      "answer": "Ankara"
+  },
+  {
+      "question": "Turkmenistan",
+      "answer": "Ashgabat"
+  },
+  {
+      "question": "Turks and Caicos Islands",
+      "answer": "Cockburn Town"
+  },
+  {
+      "question": "Tuvalu",
+      "answer": "Funafuti"
+  },
+  {
+      "question": "Uganda",
+      "answer": "Kampala"
+  },
+  {
+      "question": "Ukraine",
+      "answer": "Kyiv"
+  },
+  {
+      "question": "United Arab Emirates",
+      "answer": "Abu Dhabi"
+  },
+  {
+      "question": "United Kingdom",
+      "answer": "London"
+  },
+  {
+      "question": "United States",
+      "answer": "Washington"
+  },
+  {
+      "question": "Uruguay",
+      "answer": "Montevideo"
+  },
+  {
+      "question": "Uzbekistan",
+      "answer": "Toskent"
+  },
+  {
+      "question": "Vanuatu",
+      "answer": "Port-Vila"
+  },
+  {
+      "question": "Venezuela",
+      "answer": "Caracas"
+  },
+  {
+      "question": "Vietnam",
+      "answer": "Hanoi"
+  },
+  {
+      "question": "Virgin Islands, British",
+      "answer": "Road Town"
+  },
+  {
+      "question": "Virgin Islands, U.S.",
+      "answer": "Charlotte Amalie"
+  },
+  {
+      "question": "Wales",
+      "answer": "Cardiff"
+  },
+  {
+      "question": "Wallis and Futuna",
+      "answer": "Mata-Utu"
+  },
+  {
+      "question": "Western Sahara",
+      "answer": "El-Aai"
+  },
+  {
+      "question": "Yemen",
+      "answer": "Sanaa"
+  },
+  {
+      "question": "Yugoslavia",
+      "answer": "Beograd"
+  },
+  {
+      "question": "Zambia",
+      "answer": "Lusaka"
+  },
+  {
+      "question": "Zimbabwe",
+      "answer": "Harare"
+  }
+  ]
+  
+}

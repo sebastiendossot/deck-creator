@@ -43,10 +43,6 @@ export class Decks extends Component {
     }
 
     return (
-      <Fragment>
-        <h2>
-          Decks List
-        </h2>
         <table className="table table-striped">
           <thead>
             <tr>
@@ -59,14 +55,14 @@ export class Decks extends Component {
             {this.props.decks.map(deck => (
               <tr key={deck.id} onClick={() => this.setState({ navigateToDeck: true, deckId: deck.id })}>   
                   <td>{deck.title}</td>
-                  <td><button onClick={(event) => playDeckRedirect(event, deck.id)} className="btn btn-success btn-sm">Play</button></td>
-                  <td><button onClick={this.props.deleteDeck.bind(this, deck.id)} className="btn btn-danger btn-sm">Delete</button></td>
+                  <td><button onClick={(event) => playDeckRedirect(event, deck.id)} className="btn btn-success btn-sm"><i className="fa fa-play"/></button></td>
+                  <td><button onClick={() => this.setState({ navigateToDeck: true, deckId: deck.id })} className="btn btn-warning btn-sm"><i className="fa fa-pen"/></button></td>
+                  <td><button onClick={this.props.deleteDeck.bind(this, deck.id)} className="btn btn-danger btn-sm"><i className="fa fa-trash"/></button></td>
               </tr>
               )
             )}
           </tbody>
         </table>
-      </Fragment>
     )
   }
 }

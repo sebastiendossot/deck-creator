@@ -45,3 +45,17 @@ export const addCard = card => (dispatch, getState) => {
       });
     }).catch(err => dispatch(returnErrors(err.response.data,err.response.status)))
 }
+
+
+//ADD CARD - used to import files
+
+export const addCardFromFile = card => (dispatch, getState) => {
+  axios.post('/api/cards/', card, tokenConfig(getState))
+    .then(res => {
+      // see if we return anything
+      dispatch({
+        type: ADD_CARD,
+        payload: res.data
+      });
+    }).catch(err => dispatch(returnErrors(err.response.data,err.response.status)))
+}

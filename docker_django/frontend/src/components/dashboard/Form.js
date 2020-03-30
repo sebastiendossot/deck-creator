@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { addDeck  } from '../../actions/decks';
+import { addDeck } from '../../actions/decks';
 
 
 export class Form extends Component {
@@ -18,8 +18,8 @@ export class Form extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const { title, abstract } = this.state;
-    const deck = { title, abstract };
+    const { title } = this.state;
+    const deck = { title };
     this.props.addDeck(deck); 
     this.setState({
       title: ""
@@ -27,7 +27,7 @@ export class Form extends Component {
   }
 
   render() {
-    const {title, abstract} = this.state;
+    const {title} = this.state;
     return (
       <div className="card card-body m-4 mb-4">
         <h2> Add Deck </h2>
