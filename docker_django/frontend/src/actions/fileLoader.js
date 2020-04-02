@@ -9,13 +9,8 @@ import { ADD_DECK, ADD_CARD, TEST_JSON } from './types';
 
 // By default loads the example file
 export const loadFile = (file, isExample) => (dispatch, getState) => {
-  // dispatch({
-  //         type: TEST_JSON,
-  //         json: "I am the thiiingy"
-  //       });
   console.log(example)
   Object.keys(example).forEach(function(key) {
-    console.log("I am the key", key);
     const deck = {title: key};
     axios.post('/api/decks/', deck, tokenConfig(getState))
     .then(res => {
@@ -41,10 +36,7 @@ export const loadFile = (file, isExample) => (dispatch, getState) => {
         }).catch(err => dispatch(returnErrors(err.response.data,err.response.status)))
       })
      
-    }).catch(err => console.log(err))
-    
-    //.catch(err => dispatch(returnErrors(err.response.data,err.response.status)))
-
+    }).catch(err => dispatch(returnErrors(err.response.data,err.response.status)))
   });
- 
+  dispatch(createMessage({addFile: 'File uploaded'}));  
 }

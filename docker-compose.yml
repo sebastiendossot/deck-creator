@@ -1,10 +1,22 @@
 version: '3'
 services:
+  db:
+    image: postgres
   django:
-    build: .
     image: dockerdjango 
     ports:
       - "8030:8030"
     command: python ./docker_django/manage.py runserver 0.0.0.0:8030
     volumes: 
       - .:/app
+    depends_on: 
+      - django_migration
+      - db
+  django_migration:
+    build: .
+    image: dockerdjango
+    command: python ./docker_django/manage.py migrate --noinput
+    volumes:
+      - .:/app
+    depends_on:
+      - db

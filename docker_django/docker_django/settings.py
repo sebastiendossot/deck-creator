@@ -84,12 +84,18 @@ WSGI_APPLICATION = 'docker_django.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+      'default': {
+        'ENGINE': os.environ.get("POSTGRES_ENGINE", 'django.db.backends.postgresql_psycopg2'),
+        'NAME': os.environ.get("POSTGRES_NAME", 'cuaderno'),
+        'USER': os.environ.get("POSTGRES_USER", 'cuaderno'),
+        'PASSWORD': '',
+        'HOST': os.environ.get("POSTGRES_HOST", "localhost"),
+        'PORT': os.environ.get("POSTGRES_PORT", "5432"),
     }
 }
 
+       
+        
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

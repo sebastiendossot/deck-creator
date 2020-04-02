@@ -18,10 +18,7 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import { loadUser } from '../actions/auth'
 
-// import "./styles/main.css";
-
  import '../../styles/main.scss';
-// require ('!style-loader!css-loader!postcss-loader!sass-loader!../../styles/main.scss');
 
 
 const alertOptions = {
