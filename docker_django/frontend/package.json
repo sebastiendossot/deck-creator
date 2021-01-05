@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "file-loader": "^6.0.0",
     "font-awesome": "^4.7.0",
     "react-alert": "^6.0.0",
